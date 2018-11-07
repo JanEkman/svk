@@ -1,0 +1,377 @@
+
+[jan@pre src]$ run.py c2 cvt_1
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_1  ( 400 )
+
+time			gap[s]	fault type	detection
+
+2017-11-27 20:57:45	100000	Unknown		
+2017-11-28 21:08:03	87018	Capacitor c1u2	
+2017-11-28 21:08:06	3	Capacitor c1u2	
+
+kommentar:
+Punkterad CVT fas 2
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py ca2 cvt_2
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_2  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-06-26 11:00:12	100000	Unknown		
+2018-06-26 11:00:18	6	Unknown		
+2018-06-26 11:00:21	3	Unknown		
+2018-06-26 11:02:57	156	Unknown		
+
+kommentar:
+Fel i säkring tillrättad. Manuell intervention.
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_3
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_3  ( 400 )
+
+time			gap[s]	fault type	detection
+
+2016-10-24 06:24:42	100000	Unknown		
+2016-10-24 08:08:54	6252	Capacitor c1u3	
+2016-10-24 12:34:42	15948	Unknown		
+2016-10-24 12:38:45	243	Unknown		noisy		 re2  im2  
+2016-10-24 12:40:09	84	Unknown		noisy		 re1  
+2016-10-24 13:11:12	1863	Unknown		
+2016-10-24 20:19:03	25671	Unknown		
+
+kommentar:
+Punkterad CVT fas 3
+
+----------------------------------------------------------------------------
+
+
+[jan@pre src]$ run.py c2 cvt_4
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_4  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-18 05:30:06	100000	Capacitor c1u3	unstable	 im2 : 0.0532	
+						noisy		 re2  im2  
+2018-09-18 05:30:09	3	Capacitor c1u3	unstable	 im2 : 0.0641	
+2018-09-18 05:32:03	114	Capacitor c1u3	noisy		 re1  im1  
+2018-09-18 06:03:27	1884	Unknown		
+
+
+kommentar:
+Möjligen en punkterad CVT efter att ledningen slogs bort 2 minuter tidigare. Fas 3
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_5
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_5  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-17 06:29:24	100000	Unknown		
+
+--- 76.753 seconds ---
+
+kommentar:
+Säkerligen OK
+
+----------------------------------------------------------------------------
+
+
+[jan@pre src]$  run.py c2 cvt_6
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_6  ( 220 )
+
+kommentar:
+Säkerligen OK
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_7
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_7  ( 400 )
+
+time			gap[s]	fault type	detection
+
+2018-09-03 04:36:39	100000	Unknown		
+
+kommentar:
+Kraftig spänningssänkning fas3. Ca 3,3%. Antagligen inte en punktering 
+eftersom den borde va typ 6%.
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_8
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_8  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-08-01 14:10:48	100000	Unknown		noisy		 re1  
+2018-08-02 22:44:18	large	Unknown		
+2018-08-10 02:25:57	large	Unknown		
+2018-08-10 02:26:09	12	Unknown		
+2018-08-14 19:21:06	large	Unknown		
+2018-08-17 20:36:54	large	Unknown		
+2018-08-21 14:05:12	large	Unknown		
+
+
+kommentar:
+Detta är ett set som sträcker sig till och med 5:e sept. Data är antagligen 
+OK, men där finns ett fall 20180817 kl 20:36:57 som ser ut att vara en 
+punktering på fas 2 men inte är det.
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_9
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_9  ( 220 )
+
+kommentar:
+Säkerligen OK
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_10
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_10  ( 400 )
+
+time			gap[s]	fault type	detection
+
+2017-11-22 00:25:00	100000	Unknown		
+2017-11-22 06:55:51	23451	Unknown		
+2017-11-22 19:49:45	46434	Unknown		
+2017-11-23 12:23:54	59649	Capacitor c1u1	unstable	 re2 : 0.5758	
+						noisy		 re2  im2  
+2017-11-23 12:24:00	6	Capacitor c1u1	unstable	 re2 : 0.5758	
+						noisy		 re2  im2  
+2017-11-23 12:24:03	3	Capacitor c1u1	unstable	 re2 : 0.5757	
+						noisy		 re2  im2  
+2017-11-23 12:40:54	1011	Unknown		unstable	 im2 : 1.475	re2 : 1.475	
+2017-11-23 12:40:57	3	Capacitor c2u3	unstable	 im2 : 1.4931	re2 : 1.4931	
+2017-11-23 12:41:00	3	Capacitor c2u3	unstable	 im2 : 1.5069	re2 : 1.5069	
+2017-11-23 12:42:33	93	Unknown		unstable	 im1 : 0.4301	re1 : 0.4301	
+						noisy		 re1  im1  
+2017-11-23 12:42:39	6	Unknown		unstable	 im1 : 0.4302	re1 : 0.4302	
+						noisy		 re1  im1  
+2017-11-23 12:53:36	657	Unknown		
+2017-11-23 12:53:39	3	Unknown		
+2017-11-23 13:00:12	393	Unknown		
+
+kommentar:
+Ej ansluten mätnolla (jord). Fixad den 23:e.
+
+----------------------------------------------------------------------------
+
+
+[jan@pre src]$ run.py c2 cvt_11
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_11  ( 400 )
+
+time			gap[s]	fault type	detection
+
+2018-06-01 02:44:09	100000	Unknown		
+2018-06-01 04:50:24	7575	Unknown		
+2018-06-01 19:11:12	51648	Unknown		
+2018-06-01 20:50:57	5985	Unknown		unstable	 im2 : 0.0508	
+2018-06-01 20:51:00	3	Unknown		unstable	 im2 : 0.0508	
+2018-06-01 21:10:12	1152	Unknown		
+2018-06-01 21:14:33	261	Unknown		
+2018-06-01 21:19:12	279	Unknown		
+2018-06-01 21:20:48	96	Unknown		
+2018-06-01 21:23:24	156	Unknown		noisy		 re1  
+2018-06-01 21:24:51	87	Unknown		unstable	 re2 : 0.0646	im2 : 0.0646	
+						noisy		 re1  re2  im1  im2  
+2018-06-01 21:29:42	291	Unknown		
+2018-06-01 21:41:21	699	Unknown		unstable	 re1 : 0.0712	im1 : 0.0712	
+2018-06-01 21:41:24	3	Unknown		unstable	 im1 : 0.0574	
+						noisy		 re1  im1  
+2018-06-01 21:45:12	228	Unknown		unstable	 re1 : 0.2209	re2 : 0.2209	im1 : 0.2209	im2 : 0.2209	
+2018-06-01 21:45:21	9	Unknown		unstable	 re1 : 0.1924	re2 : 0.1924	im1 : 0.1924	im2 : 0.1924	
+2018-06-01 21:47:00	99	Unknown		unstable	 re1 : 0.2496	im1 : 0.2496	
+2018-06-01 21:50:30	210	Unknown		
+2018-06-01 21:54:48	258	Unknown		
+2018-06-01 22:26:36	1908	Unknown		
+2018-06-01 22:26:39	3	Unknown		
+2018-06-01 22:29:09	150	Unknown		noisy		 im2  
+2018-06-01 22:42:12	783	Unknown		
+2018-06-01 22:50:39	507	Unknown		
+2018-06-01 22:50:42	3	Unknown		
+2018-06-01 22:56:09	327	Unknown		
+2018-06-02 00:45:54	6585	Unknown		
+2018-06-02 00:45:57	3	Unknown		
+2018-06-02 00:58:30	753	Unknown		
+2018-06-02 02:49:24	6654	Unknown		
+2018-06-02 02:51:45	141	Unknown		noisy		 im2  
+2018-06-02 02:51:48	3	Unknown		noisy		 im2  
+2018-06-02 02:51:51	3	Unknown		
+2018-06-02 02:51:54	3	Unknown		unstable	 re2 : 0.0506	
+2018-06-02 02:54:03	129	Unknown		noisy		 im1  
+2018-06-02 06:11:30	11847	Unknown		
+2018-06-02 06:14:00	150	Unknown		
+2018-06-02 06:18:24	264	Unknown		unstable	 re2 : 0.1145	im2 : 0.1145	
+						noisy		 re2  im2  
+2018-06-02 11:09:30	17466	Unknown		
+2018-06-02 16:03:00	17610	Unknown		
+2018-06-02 19:59:09	14169	Unknown		
+2018-06-02 21:07:06	4077	Unknown		
+2018-06-02 21:27:39	1233	Unknown		
+2018-06-02 22:22:27	3288	Unknown		
+2018-06-02 22:40:45	1098	Unknown		unstable	 re2 : 0.2611	im2 : 0.2611	
+2018-06-02 22:40:48	3	Unknown		unstable	 re2 : 0.2184	im2 : 0.2184	
+						noisy		 re2  im2  
+2018-06-02 22:41:27	39	Unknown		unstable	 re2 : 0.0686	im2 : 0.0686	
+2018-06-02 22:41:30	3	Unknown		unstable	 re2 : 0.0704	im2 : 0.0704	
+2018-06-02 22:44:42	192	Unknown		unstable	 im1 : 0.0579	im2 : 0.0579	
+2018-06-02 22:52:18	456	Unknown		
+2018-06-02 22:52:21	3	Unknown		
+2018-06-02 23:07:24	903	Unknown		
+2018-06-02 23:41:09	2025	Unknown		
+2018-06-02 23:44:51	222	Unknown		
+2018-06-02 23:59:30	879	Unknown		
+
+kommentar:
+Dålig kontakt i mätkrets. Säkring bytt i slutet på juni
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_12
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_12  ( 400 )
+
+kommentar:
+Här är nog allt OK igen
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_13
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_13  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-17 05:42:03	100000	Unknown		
+2018-09-17 06:29:24	2841	Unknown		
+
+kommentar:
+Magnetisk spänningstrafo som jämförelse med dataset5
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_14_1
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_14_1  ( 220 )
+
+kommentar:
+sista avläsning 2018-09-18 05:30:03
+
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_14_2
+
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_14_2  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-19 07:48:15	100000	Unknown		
+2018-09-19 07:51:36	201	Unknown		
+
+kommentar: 
+
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_14_3
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_14_3  ( 220 )
+
+kommentar:
+
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_14_4
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_14_4  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-18 05:30:06	100000	Capacitor c1u3	unstable	 im2 : 0.0532	
+						noisy		 re2  im2  
+2018-09-18 05:30:09	3	Capacitor c1u3	unstable	 im2 : 0.0641	
+2018-09-18 05:32:03	114	Capacitor c1u3	noisy		 re1  im1  
+2018-09-18 06:03:27	1884	Unknown		
+
+kommentar:
+Två punkteringar kort efter varandra 20180918 05:30:06 och 05:32:03. 
+Aktuell mätare är nummer 4. Nummer 5 är magnetisk resten CVTer.
+
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_15_1
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_15_1  ( 220 )
+
+kommentar:
+Samma data som Dataset14 men två dagar till
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_15_2
+['Re(Zero)', 'Im(Zero)']
+
+	 No alarms in cvt_15_2  ( 220 )
+
+kommentar:
+Samma data som Dataset14 men två dagar till
+
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_15_3
+['Re(Zero)', 'Im(Zero)']
+
+	Alarms cvt_15_3  ( 220 )
+
+time			gap[s]	fault type	detection
+
+2018-09-20 11:25:48	100000	Unknown		
+
+kommentar:
+Samma data som Dataset14 men två dagar till
+
+----------------------------------------------------------------------------
+
+[jan@pre src]$ run.py c2 cvt_15_4
+
+	 No alarms in cvt_15_4  ( 220 )
+
+kommentar:
+Samma data som Dataset14 men två dagar till

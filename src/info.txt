@@ -1,0 +1,147 @@
+
+
+----------------------------------
+
+
+       1 how to run this program by 
+
+
+----------------------------------
+
+       $ run.py [m, p, zp, s, zs, i, c, pc] name
+
+           t:   make truth files (which are used for making input)
+           p:   plot abs values of the zero and negative sequences
+           zp:  plot Re and Im of the zero sequence
+           s:   make and save abs values of the zero and negative sequences
+           zs:  make and save Re and Im of the zero sequence
+           i:   make and save input data
+	   c:   find, using Re(Zero) only, and classify punctured capacitors 
+	   ca:  c with plots of analysis data
+	   c2:  find, using Re(Zero) and Im(Zero), and classify punctured capacitors
+	   c2a: c2 with plots of analysis data
+
+	   name is in [data_1, ..., data_15]  for run.py m
+	   and in [cvt_1, ..., cvt_13, 
+                   cvt_14_1, ..., cvt_14_4,
+		   cvt_15_0, ..., cvt_15_4]
+
+
+       examples:
+
+           $ run.py m data_13
+           $ run.py m all
+           $ run.py zp cvt_1
+       	   $ run.py s cvt_15_2
+
+
+----------------------------------
+
+
+       2 data
+
+
+----------------------------------
+
+
+       original: The recieved data.
+       		 File names 
+		     ... svk/data/original/Dataset1/Dataset1.csv
+		 etc.
+
+       truth:    Represents the ground truth output or result.
+       		 File names 
+		     ... svk/data/truth/cvt_1.csv 
+		 etc.
+
+       		 Produced from the original data by reading, renaming, 
+                 rearranging and addning status columns
+
+       input:    The data used as a starting point for the machine
+       		 learning and data analysisproduce macinery applied
+		 to produce results.
+		 File names 
+		     ... svk/data/input/cvt_1.csv 
+		 etc.
+
+		 Producedd from the truth data by removing status
+       		 columns and adding symmetrical columns (30 columns)
+
+
+----------------------------------
+
+
+       3 data files columns 
+
+
+----------------------------------
+
+
+       original data:    original or original_4 or original_5 
+       truth data:	 basic and status
+       input data: 		 basic and symmetric
+
+
+       original columns: 
+
+          'Datum', 
+          'PhaseSymmetryUL1', 
+          'PhaseSymmetryUL2', 
+          'PhaseSymmetryUL3',
+          'UL1', 
+          'UL2', 
+          'UL3'
+
+       original_4: 'Datum', and the rest of original repeated 4 times
+       original_5  'Datum', and the rest of original repeated 5 times
+
+       basic columns:
+
+          'time', 
+          'phase1',
+          'phase2',
+          'phase3',
+          'u1',
+          'u2',
+          'u3',
+
+       status columns:
+
+          'cap_u1c1',
+          'cap_u2c1',
+          'cap_u3c1',
+          'cap_u1c2',
+          'cap_u2c2',
+          'cap_u3c2',
+          'fuse_u1',
+          'fuse_u2',
+          'fuse_u3',
+          'unbalance',
+          'other',
+
+       symmetrical columns:
+
+          'V1'
+          'Re(Positive)'
+          'Im(Positive)'
+          'Theta(Positive)'
+          'Re(Zero)'
+          'Im(Zero)'
+          'Abs(Zero)'
+          'Theta(Zero)'
+          'Re(Negative)'
+          'Im(Negative)'
+          'Abs(Negative)'
+          'Theta(Negative)'
+          'Re(Zero)diff'
+          'Im(Zero)diff'
+          'Abs(Zero)diff'
+          'Theta(Zero)diff'
+          'Re(Positive)diff'
+          'Im(Positive)diff'
+          'Theta(Positive)diff'
+          'Re(Negative)diff'
+          'Im(Negative)diff'
+          'Abs(Negative)diff'
+          'Theta(Negative)diff'
+          
